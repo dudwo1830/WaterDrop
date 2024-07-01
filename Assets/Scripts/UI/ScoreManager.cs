@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour, IScoreManager
     private void Start()
     {
         HighScore = PlayerPrefs.GetInt("HighScore", 0);
-        highScoreText.text = HighScore.ToString();
+        highScoreText.text = $"{HighScore:D6}";
     }
 
     public void SaveScore()
@@ -38,5 +38,6 @@ public class ScoreManager : MonoBehaviour, IScoreManager
         {
             highScoreText.text = $"{Score:D6}";
         }
+        Debug.Log(Score);
     }
 }
