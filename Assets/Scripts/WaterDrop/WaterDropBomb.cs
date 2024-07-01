@@ -3,8 +3,8 @@ using UnityEngine.EventSystems;
 
 public class WaterDropBomb : WaterDropBase
 {
-    public override void Explode()
+    public override void Explode(IScoreManager scoreManager)
     {
-        Debug.Log("Bomb");
+        base.Explode(scoreManager);
     }
 }

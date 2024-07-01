@@ -3,6 +3,13 @@ using UnityEngine;
 public class ClickManager : MonoBehaviour
 {
     private Camera mainCamera;
+    private IScoreManager scoreManager;
+
+
+    private void Awake()
+    {
+        scoreManager = GetComponent<ScoreManager>();
+    }
 
     private void Start()
     {
@@ -20,7 +27,7 @@ public class ClickManager : MonoBehaviour
                 WaterDropBase waterDrop = hit.transform.gameObject.GetComponent<WaterDropBase>();
                 if (waterDrop != null)
                 {
-                    waterDrop.Explode();
+                    waterDrop.Explode(scoreManager);
                 }
             }
         }

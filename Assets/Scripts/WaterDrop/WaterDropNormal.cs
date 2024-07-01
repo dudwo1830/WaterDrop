@@ -3,8 +3,8 @@ using UnityEngine.EventSystems;
 
 public class WaterDropNormal : WaterDropBase
 {
-    public override void Explode()
+    public override void Explode(IScoreManager scoreManager)
     {
-        Debug.Log("Combo");
+        base.Explode(scoreManager);
     }
 }
