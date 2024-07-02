@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6728329109832365064}
   - component: {fileID: 6030101636670400456}
+  - component: {fileID: -1468466705536719226}
   - component: {fileID: -279065217080006126}
   - component: {fileID: 9141416063459538078}
+  - component: {fileID: -1979734674010476546}
   m_Layer: 0
   m_Name: WaterDropBomb
   m_TagString: Untagged
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1509434, g: 0.03773585, b: 0.03773585, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -86,6 +88,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1468466705536719226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361314476736534616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7866b14060c73134b9c8875795675fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-279065217080006126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa3f4eef0950bb4a965ae22b9f15c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minScale: 0.5
+  maxScale: 1.5
+  minSpeed: 1
+  maxSpeed: 3
+  score: -50
 --- !u!114 &9141416063459538078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +129,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f947b0398659c5e41a28a98349f98ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &-1979734674010476546
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2361314476736534616}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
