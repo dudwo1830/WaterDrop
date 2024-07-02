@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour, IGameManager
 {
     private IScoreManager scoreManager;
+    private IPanelManager panelManager;
 
     private void Awake()
     {
         scoreManager = GetComponent<IScoreManager>();
+        panelManager = GetComponent<IPanelManager>();
     }
 
     private void Start()
@@ -24,6 +26,7 @@ public class GameManager : MonoBehaviour, IGameManager
     {
         Time.timeScale = 0f;
         scoreManager.SaveScore();
+        panelManager.ShowReStartPanel();
     }
 
     public void RestartGame()

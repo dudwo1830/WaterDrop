@@ -10,8 +10,8 @@ public class ScoreManager : MonoBehaviour, IScoreManager
     [SerializeField, Header("하이스코어 텍스트")]
     private TextMeshProUGUI highScoreText;
 
-    public static int Score { get; private set; } = 0;
-    public static int Combo { get; private set; } = 0;
+    public int Score { get; private set; } = 0;
+    public int Combo { get; private set; } = 0;
     public int HighScore { get; private set; }
 
     private void Start()
@@ -22,8 +22,10 @@ public class ScoreManager : MonoBehaviour, IScoreManager
 
     public void SaveScore()
     {
-        PlayerPrefs.SetInt("HighScore", Score);
-        Debug.Log("Saved");
+        if (Score > HighScore)
+        {
+            PlayerPrefs.SetInt("HighScore", Score);
+        }
     }
 
     public void IncreaseScore(int score)
