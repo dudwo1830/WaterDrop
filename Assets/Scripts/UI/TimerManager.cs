@@ -11,9 +11,12 @@ public class TimerManager : MonoBehaviour
     [SerializeField, Header("타이머 텍스트")]
     private TextMeshProUGUI timerText;
 
+    private IGameManager gameManager;
+
     private void Start()
     {
         SetTimer(limitTime);
+        gameManager = GetComponent<GameManager>();
     }
 
     private void Update()
@@ -33,7 +36,7 @@ public class TimerManager : MonoBehaviour
     {
         if (value <= limitTimer.minValue)
         {
-            //GameOver
+            gameManager.StopGame();
         }
     }
 }

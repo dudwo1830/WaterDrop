@@ -20,14 +20,11 @@ public abstract class WaterDropBase: MonoBehaviour, IExplodable
 
     private IWaterDropPool pool;
     private Camera mainCamera;
-    private CircleCollider2D col;
 
     private void Awake()
     {
         waterDropMovement = GetComponent<WaterDropMovement>();
         waterDropScale = GetComponent<WaterDropScale>();
-
-        col = GetComponent<CircleCollider2D>();
     }
    
     private void Start()

@@ -17,12 +17,13 @@ public class ScoreManager : MonoBehaviour, IScoreManager
     private void Start()
     {
         HighScore = PlayerPrefs.GetInt("HighScore", 0);
-        highScoreText.text = $"{HighScore:D6}";
+        highScoreText.text = $"High: {HighScore:D6}";
     }
 
     public void SaveScore()
     {
         PlayerPrefs.SetInt("HighScore", Score);
+        Debug.Log("Saved");
     }
 
     public void IncreaseScore(int score)
@@ -36,8 +37,7 @@ public class ScoreManager : MonoBehaviour, IScoreManager
 
         if (Score >= HighScore)
         {
-            highScoreText.text = $"{Score:D6}";
+            highScoreText.text = $"High: {Score:D6}";
         }
-        Debug.Log(Score);
     }
 }
