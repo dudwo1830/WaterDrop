@@ -16,10 +16,12 @@ public class WaterDropManager : MonoBehaviour
     private float Timer;
 
     private IWaterDropPool pool;
-    
+    private IWaterDropImage waterDropImage;
+
     private void Awake()
     {
         pool = GetComponent<WaterDropPool>();
+        waterDropImage = GetComponent<WaterDropImage>();
     }
 
     private void Update()
@@ -30,6 +32,11 @@ public class WaterDropManager : MonoBehaviour
             var waterDrop = pool.GetWaterDrop();
             if (waterDrop != null)
             {
+                var waterDropNormal = waterDrop.GetComponent<WaterDropNormal>();
+                if (waterDropNormal != null)
+                {
+                    waterDropImage.SetRandomSprite(waterDropNormal);
+                }
                 waterDrop.transform.SetParent(transform);
                 waterDrop.transform.Translate(GetRandomPosition());
             }

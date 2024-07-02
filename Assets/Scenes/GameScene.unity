@@ -1040,7 +1040,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 970763043}
   m_FillRect: {fileID: 2068718991}
   m_HandleRect: {fileID: 970763042}
@@ -1585,6 +1585,7 @@ GameObject:
   - component: {fileID: 1296026229}
   - component: {fileID: 1296026231}
   - component: {fileID: 1296026230}
+  - component: {fileID: 1296026232}
   m_Layer: 0
   m_Name: WaterDropManager
   m_TagString: Untagged
@@ -1639,6 +1640,23 @@ MonoBehaviour:
   - {fileID: 2361314476736534616, guid: c65fbc2e92abff04d86fd63be4d208a0, type: 3}
   - {fileID: 2361314476736534616, guid: 232ac93945bc61841abf8d95d3b4c4cb, type: 3}
   maxSize: 20
+--- !u!114 &1296026232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296026228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b8bcadc5e735a45ba32e9418d0ab78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 1b4a0a19c2e1f4049a653aaae8649041, type: 3}
+  - {fileID: 21300000, guid: 8892e10d8bb872b488b97ece5931ae94, type: 3}
+  - {fileID: 21300000, guid: e309e5448d301dd4f96f9be65b8993a5, type: 3}
+  - {fileID: 21300000, guid: 98d4d2e44c2241c4ba0038361be728a3, type: 3}
 --- !u!1 &1476854056
 GameObject:
   m_ObjectHideFlags: 0
